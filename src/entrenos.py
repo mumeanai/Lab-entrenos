@@ -46,7 +46,7 @@ def tipos_entreno(entrenos):
     '''
     tipos = set()
     for e in entrenos:
-        e.tipo.add(e.tipo) #es el equivalente de append (que es para listas), de los conjuntos
+        tipos.add(e.tipo) #es el equivalente de append (que es para listas), de los conjuntos
     return sorted(tipos) # recibe cualquier coleccion de elementos y devuelve una lista ordenada de estos
     
     
@@ -60,6 +60,6 @@ def entrenos_duracion_superior(entrenos, d):
 def suma_calorias(entrenos, f_inicio, f_fin):
     calorias_totales = 0
     for e in entrenos:
-        if f_inicio <= e.fecha <= f_fin:
+        if f_inicio <= e.fechahora <= f_fin:
             calorias_totales += e.calorias
     return calorias_totales
